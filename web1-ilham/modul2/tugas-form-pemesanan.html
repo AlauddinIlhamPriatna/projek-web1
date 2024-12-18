@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { max-width: 600px; margin: auto; padding: 20px; }
+        fieldset { margin-bottom: 20px; }
+        .form-group { margin-bottom: 10px; }
+        label { display: block; margin-bottom: 5px; }
+        input, select { width: 100%; padding: 8px; box-sizing: border-box; }
+        button { padding: 10px 15px; margin-right: 5px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Form Pemesanan -->
+    <fieldset>
+        <legend>Form Pemesanan</legend>
+        <form action="/proses_pemesanan" method="post">
+            <div class="form-group">
+                <label>Id Pemesan:</label>
+                <input type="text" name="id_pemesan" readonly value="1">
+            </div>
+            <div class="form-group">
+                <label>Nama Pemesan:</label>
+                <input type="text" name="nama_pemesan">
+            </div>
+            <div class="form-group">
+                <label>Nomor Identitas:</label>
+                <input type="text" name="nomor_identitas">
+            </div>
+            <div class="form-group">
+                <label>Tipe Kamar:</label>
+                <select name="tipe_kamar">
+                    <option value="">--Pilih--</option>
+                    <option value="standar">Standar</option>
+                    <option value="deluxe">Deluxe</option>
+                    <option value="family">Family</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Harga:</label>
+                <input type="text" name="harga">
+            </div>
+            <div class="form-group">
+                <label>Tanggal Pesan:</label>
+                <input type="date" name="tanggal_pesan">
+            </div>
+            <div class="form-group">
+                <label>Durasi Menginap (hari):</label>
+                <input type="number" name="durasi_menginap">
+            </div>
+            <div class="form-group">
+                <label>Termasuk Breakfast:</label>
+                <input type="checkbox" name="termasuk_breakfast">
+            </div>
+            <div class="form-group">
+                <label>Total Bayar:</label>
+                <input type="text" name="total_bayar">
+            </div>
+            <button type="submit">Simpan</button>
+            <button type="reset">Batal</button>
+        </form>
+    </fieldset>
+
+    <!-- Form Tambah Data Kamar -->
+    <fieldset>
+        <legend>Form Data Kamar</legend>
+        <form action="/tambah_kamar" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label>ID Kamar:</label>
+                <input type="text" name="id_kamar">
+            </div>
+            <div class="form-group">
+                <label>Gambar Ruangan:</label>
+                <input type="file" name="gambar_ruangan">
+            </div>
+            <div class="form-group">
+                <label>Jenis Kamar:</label>
+                <input type="text" name="jenis_kamar">
+            </div>
+            <div class="form-group">
+                <label>Harga:</label>
+                <input type="text" name="harga">
+            </div>
+            <div class="form-group">
+                <label>Fasilitas:</label>
+                <input type="text" name="fasilitas">
+            </div>
+            <button type="submit">Simpan</button>
+        </form>
+    </fieldset>
+
+    <!-- Form Tambah Data Fasilitas -->
+    <fieldset>
+        <legend>Form Data Fasilitas</legend>
+        <form action="/tambah_fasilitas" method="post">
+            <div class="form-group">
+                <label>ID:</label>
+                <input type="text" name="id_fasilitas">
+            </div>
+            <div class="form-group">
+                <label>Nama:</label>
+                <input type="text" name="nama">
+            </div>
+            <div class="form-group">
+                <label>Fasilitas:</label>
+                <input type="text" name="fasilitas">
+            </div>
+            <div class="form-group">
+                <label>Harga Weekend:</label>
+                <input type="text" name="harga_weekend">
+            </div>
+            <div class="form-group">
+                <label>Harga Weekday:</label>
+                <input type="text" name="harga_weekday">
+            </div>
+            <div class="form-group">
+                <label>Kuota:</label>
+                <input type="number" name="kuota">
+            </div>
+            <div class="form-group">
+                <label>Jam Buka:</label>
+                <input type="time" name="jam_buka">
+            </div>
+            <div class="form-group">
+                <label>Jam Tutup:</label>
+                <input type="time" name="jam_tutup">
+            </div>
+            <button type="submit">Simpan</button>
+        </form>
+    </fieldset>
+</div>
+
+</body>
+</html>

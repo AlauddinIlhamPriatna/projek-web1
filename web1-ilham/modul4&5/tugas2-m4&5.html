@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Tambah Data Fasilitas</title>
+    <script>
+        function validateForm() {
+            var fasilitas = document.getElementById("fasilitas").value;
+            var harga = document.getElementById("harga").value;
+
+            if (fasilitas === "" || harga === "" || isNaN(harga) || harga <= 0) {
+                alert("Data tidak valid. Pastikan semua kolom terisi dan harga berupa angka positif.");
+                return false;
+            } else {
+                alert("Data berhasil ditambahkan!");
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Tambah Data Fasilitas</h2>
+    <form onsubmit="return validateForm();">
+        <label for="fasilitas">Nama Fasilitas:</label>
+        <input type="text" id="fasilitas" name="fasilitas"><br><br>
+        <label for="harga">Harga (Rp):</label>
+        <input type="text" id="harga" name="harga"><br><br>
+        <button type="submit">Simpan</button>
+    </form>
+</body>
+</html>

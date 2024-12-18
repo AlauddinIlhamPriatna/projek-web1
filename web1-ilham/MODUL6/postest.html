@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Change Content</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="fakultas">FKom</div>
+    <input type="text" id="university" value="Uniku">
+    <button id="changeContent">Change</button>
+
+    <script>
+        $(document).ready(function() {
+            $("#changeContent").click(function() {
+                $("#fakultas").text("Fakultas Ilmu Komputer");
+                $("#university").val("Universitas Kuningan");
+            });
+        });
+    </script>
+</body>
+</html>
